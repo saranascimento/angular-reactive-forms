@@ -20,8 +20,10 @@ public cadastroForm: FormGroup = this.formBuilder.group({
   }
 
   public submitForm(): void {
-    console.log(this.cadastroForm.value)
-    console.log(this.cadastroForm.value.firstName)
-    console.log(this.cadastroForm.value.lastName)
+    if(this.cadastroForm.valid) {
+      console.log(this.cadastroForm.value)
+      console.log(this.cadastroForm.value.firstName)
+      console.log(this.cadastroForm.value.lastName)
+    }
   }
 }
